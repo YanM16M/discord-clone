@@ -57,7 +57,7 @@ export const ServerHeadar = ({
             >
                 {isModerator && (
                     <DropdownMenuItem
-                    onClick={() => onOpen("invite", { server })}
+                        onClick={() => onOpen("invite", { server })}
                         className="text-indigo-600 dark:text-indigo-400
                         px-3 py-2 text-sm cursor-pointer"
                     >
@@ -67,6 +67,7 @@ export const ServerHeadar = ({
                 )}
                 {isAdmin && (
                     <DropdownMenuItem
+                        onClick={() => onOpen("editServer", { server })}
                         className="px-3 py-2 text-sm cursor-pointer"
                     >
                         Server Settings
@@ -75,6 +76,7 @@ export const ServerHeadar = ({
                 )}
                 {isAdmin && (
                     <DropdownMenuItem
+                        onClick={() => onOpen("members", { server })}
                         className="px-3 py-2 text-sm cursor-pointer"
                     >
                         Manage Members
@@ -83,6 +85,7 @@ export const ServerHeadar = ({
                 )}
                 {isModerator && (
                     <DropdownMenuItem
+                        onClick={() => onOpen("createChannel")}
                         className="px-3 py-2 text-sm cursor-pointer"
                     >
                         Create Channel
